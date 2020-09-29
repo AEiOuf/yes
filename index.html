@@ -1,25 +1,19 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Game Lol</title>
+    <title>a</title>
 </head>
+<script src="main.js" charset="utf-8" type="text/javascript"></script>
 <body>
-    <div id="app">
-        <p id="numberThing">0</p>
-        <button onclick="increment()">Make number go up</button>
-        <button onclick="buyIncrementIncrementer()" id="incrementIncrementerThing">Make number go up even more | Cost: 10</button>
-    </div>  
-    <div>
-        <button>Automator thingy idk | WIP</button>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="game.js" charset="utf-8" type="text/javascript"></script>
-    <script>
-      const app = new Vue({
-        el: "#app",
-        data: { number: 0 }
-      });
-    </script>
-  </body>
+<p id="number">You have 0.</p>
+<div id="lol" style="display: none;">
+    <p id="lol12">Your increment power is currently 1.</p>
+</div>
+<button onclick="goUp()">Make number go up</button> <br>
+<div id="lol2" style="display: none;">
+    <button onClick="squarecrement()" id="squarecrementd">Upgrade increment power | Cost: 10</button>
+</div>
+</body>
 </html>
