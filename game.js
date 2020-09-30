@@ -28,7 +28,6 @@ function squarecrement(){
 }
 
 function tab(tab){
-    console.log(tab)
     document.getElementById("increment").style.display = "none"
     document.getElementById("workers").style.display = "none"
     document.getElementById(tab).style.display = "inline-block"
