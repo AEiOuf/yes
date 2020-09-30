@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+}
+p{
+    color: white;
+}
+.btn {
+    BORDER: 1px solid;  COLOR: black; height: 50px; width: 200px;
+    border-radius: 10px;
+    vertical-align: top;
+    cursor: pointer;
+}
