@@ -3,27 +3,66 @@
 <head>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="game.js" charset="utf-8" type="text/javascript"></script>
     <script src="break_infinity.js"></script>
+    <script src="game.js" charset="utf-8" type="text/javascript"></script>
+    <script src="Javascripts/saving.js" charset="utf-8" type="text/javascript"></script>
+    <script src="Javascripts/automation.js" charset="utf-8" type="text/javascript"></script>
+    <script src="Javascripts/shop.js" charset="utf-8" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a</title>
+    <title>lol</title>
 </head>
 
 <body>
     <p id="number">You have 0.</p>
     <p id="lol12" style="display: none">Your increment power is currently 1.</p>
     <div id="nav" style="display: none">
-        <button class="btn" onclick="tab('increment')" style="color: gray">Base</button>
-        <button class="btn" onclick="tab('workers')" style="color: aqua">Workers</button>
+        <table>
+            <tr>
+                <td class="button" onclick="tab('increment')" style="color: gray; border-color: gray">Base</td>
+                <td class="button" onclick="tab('workers')" style="color: aqua; border-color: #00ffff">Workers</td>
+                <td class="button" onclick="tab('upgrades')" style="color: gold; border-color: gold; display: none; text-align: center" id="upgradeButton">Upgrades</td>
+                <td class="button" onclick="tab('options')" style="color: black; border-color: black">Options</td>
+            </tr>
+        </table>
     </div>
     <div id="increment">
         <button class="btn" onclick="goUp()" style="display: inline-block">Make number go up</button>
         <button class="btn" onclick="squarecrement()" id="squarecrementd" style="display: none">Upgrade increment power <br> Cost: 10</button>
     </div>
     <div id="workers" style="display: none">
-        <p id="workerCount">No. of workers: 0</p>
-        <button class="btn" onclick="buyWorker()" id="Workers1">Buy a Worker <br> Cost: 100</button>
+        <table>
+            <caption class="tier1" id="workerCaption">Your workers are increasing the number at a rate of 1/s</caption>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tier1" id="workerCount">No. of workers: 0</td>
+                <td class="tier1" onclick="buyWorker()" id="Workers1" style="border: 1px solid; border-radius: 10px; background-color: gray; cursor: pointer">Cost: 100</td>
+            </tr>
+        </table>
+    </div>
+    <div id="upgrades" style="display: none">
+        <table>
+            <caption style="color: white">Scam shop</caption>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    </div>
+    <div id="options" style="display: none">
+        <table>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="save()">Save the Game</button></td>
+                <td><button class="btn" onclick="reset()">Reset the Game</button></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

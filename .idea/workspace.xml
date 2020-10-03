@@ -11,11 +11,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../yes" />
   </component>
   <component name="ProjectId" id="1iAKfGYtNssST12G6tgWVVC53rz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,7 +49,9 @@
       <updated>1601345070820</updated>
       <workItem from="1601345078132" duration="391000" />
       <workItem from="1601345589577" duration="4430000" />
-      <workItem from="1601436419834" duration="9217000" />
+      <workItem from="1601436419834" duration="12884000" />
+      <workItem from="1601640642879" duration="21000" />
+      <workItem from="1601730531967" duration="3741000" />
     </task>
     <servers />
   </component>

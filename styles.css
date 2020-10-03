@@ -4,9 +4,28 @@ body{
 p{
     color: white;
 }
+.tier1{
+    color: aqua;
+}
 .btn {
     BORDER: 1px solid;  COLOR: black; height: 50px; width: 200px;
     border-radius: 10px;
     vertical-align: top;
     cursor: pointer;
+}
+table{
+    border: none;
+}
+th, td{
+    border: none;
+    text-align: center;
+    height: 25px; width: 200px;
+}
+.button{
+    text-align: center;
+    height: 50px; width: 200px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    BORDER: 1px solid;
 }
