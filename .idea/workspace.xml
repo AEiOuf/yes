@@ -16,7 +16,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../yes" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iAKfGYtNssST12G6tgWVVC53rz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/main.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -52,6 +52,29 @@
       <workItem from="1601436419834" duration="12884000" />
       <workItem from="1601640642879" duration="21000" />
       <workItem from="1601730531967" duration="3741000" />
+      <workItem from="1601739802353" duration="3380000" />
+      <workItem from="1601748507945" duration="220000" />
+      <workItem from="1601748737152" duration="6159000" />
+      <workItem from="1601880423478" duration="527000" />
+      <workItem from="1601881355729" duration="1255000" />
+      <workItem from="1602242442045" duration="1673000" />
+      <workItem from="1602923042953" duration="6759000" />
+      <workItem from="1604223820905" duration="7992000" />
+      <workItem from="1604317503353" duration="7704000" />
+      <workItem from="1604376328489" duration="7513000" />
+      <workItem from="1604551027082" duration="223000" />
+      <workItem from="1604551500118" duration="16342000" />
+      <workItem from="1604846540539" duration="2984000" />
+      <workItem from="1604903692801" duration="1254000" />
+      <workItem from="1604928442949" duration="9006000" />
+      <workItem from="1605427732606" duration="10474000" />
+      <workItem from="1605577692646" duration="1747000" />
+      <workItem from="1606126840062" duration="1797000" />
+      <workItem from="1606184085362" duration="1024000" />
+      <workItem from="1606400636984" duration="8785000" />
+      <workItem from="1606837625100" duration="403000" />
+      <workItem from="1607005154138" duration="5028000" />
+      <workItem from="1607340014154" duration="1349000" />
     </task>
     <servers />
   </component>
@@ -59,13 +82,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1601345834484">
+    <state x="309" y="62" key="#Inspections" timestamp="1606409815984">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1601345834484" />
+    <state x="309" y="62" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1606409815984" />
+    <state x="363" y="120" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604551122251">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="363" y="120" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1604551122251" />
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1606187232680">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1606187232680" />
+    <state x="263" y="118" key="IDE.errors.dialog" timestamp="1601752357182">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="263" y="118" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1601752357182" />
     <state x="184" y="28" key="SettingsEditor" timestamp="1601348022628">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1601348022628" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605433063292">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1605433063292" />
   </component>
 </project>

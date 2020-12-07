@@ -1,5 +1,11 @@
 body{
     background-color: black;
+    font-family: Montserrat, serif;
+    /*font-family: Consolas, serif;*/
+}
+button{
+    font-family: Montserrat, serif;
+    /*font-family: Consolas, serif;*/
 }
 p{
     color: white;
@@ -7,11 +13,73 @@ p{
 .tier1{
     color: aqua;
 }
+.tier2{
+    color: rgb(0,255,0);
+}
+.tier1button {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background-color: black;
+    color: aqua;
+    cursor: pointer;
+    width: inherit;
+    height: inherit;
+}
+.tier2button {
+    border: 1px solid rgb(0,255,0);
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(0,255,0);
+    cursor: pointer;
+    width: inherit;
+    height: inherit;
+}
+.tier1buttonafford{
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background-color: rgba(0,255,255,0.25);
+    color: aqua;
+    cursor: pointer;
+    width: inherit;
+    height: inherit;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.tier2buttonafford{
+    border: 1px solid rgb(0,255,0);
+    border-radius: 10px;
+    background-color: rgba(0,255,0,0.25);
+    color: rgb(0,255,0);
+    cursor: pointer;
+    width: inherit;
+    height: inherit;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.tier1buttonafford:hover{
+    background-color: rgba(0,255,255,0.5);
+    box-shadow: 0 0 10px aqua;
+}
+.tier2buttonafford:hover{
+    background-color: rgba(0,255,0,0.5);
+    box-shadow: 0 0 10px rgba(0,255,0,1);
+}
 .btn {
-    BORDER: 1px solid;  COLOR: black; height: 50px; width: 200px;
+    BORDER: 1px solid white;  COLOR: white; height: 50px; width: 200px;
+    background-color: #111111;
     border-radius: 10px;
     vertical-align: top;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.btn:hover {
+    background-color: #999999;
+    box-shadow: 0 0 15px white;
+}
+.btn#prestigeBtn:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }
 table{
     border: none;
@@ -19,13 +87,106 @@ table{
 th, td{
     border: none;
     text-align: center;
-    height: 25px; width: 200px;
+    height: 25px; width: 250px;
 }
 .button{
     text-align: center;
     height: 50px; width: 200px;
     cursor: pointer;
-    background-color: white;
+    background-color: black;
     border-radius: 10px;
     BORDER: 1px solid;
+    transition-duration: 0.2s;
+}
+.button:hover {
+    background-color: white;
+    box-shadow: 0 0 25px white;
+}
+.miniButton{
+    text-align: center;
+    height: 25px; width: 200px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    BORDER: 1px solid;
+    transition-duration: 0.2s;
+}
+.miniButton:hover {
+    background-color: white;
+    box-shadow: 0 0 25px white;
+}
+.unbought{
+    text-align: center;
+    color: gold;
+    height: 60px; width: 250px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.unbought:hover{
+    background-color: #111111;
+}
+.bought{
+    text-align: center;
+    height: 60px; width: 250px;
+    background-color: rgba(255,215,0,1);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.unbought2{
+    text-align: center;
+    color: rgba(0, 255, 0, 1);
+    height: 60px; width: 250px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 0, 1);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.unbought2:hover{
+    background-color: rgba(0, 255, 0, 0.2);
+}
+.bought2{
+    text-align: center;
+    color: rgba(0, 255, 0, 1);
+    height: 60px; width: 250px;
+    background-color: rgba(0,255,0,0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 0, 1);
+}
+.incomplete{
+    text-align: center;
+    color: rgba(255, 0, 0, 1);
+    height: 60px; width: 250px;
+    cursor: pointer;
+    background-color: rgba(255,0,0,0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 1);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.incomplete:hover{
+    background-color: rgba(255,0,0,0.4);
+}
+.automatorOn {
+    text-align: center;
+    height: 25px;
+    width: 100px;
+    cursor: pointer;
+    background-color: black;
+    BORDER: 1px solid green;
+    color: green;
+}
+.automatorOff{
+    text-align: center;
+    height: 25px;
+    width: 100px;
+    cursor: pointer;
+    background-color: black;
+    BORDER: 1px solid red;
+    color: red;
 }

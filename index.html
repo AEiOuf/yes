@@ -1,68 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="stylesheet" href="styles.css">
-    <script src="break_infinity.js"></script>
-    <script src="game.js" charset="utf-8" type="text/javascript"></script>
-    <script src="Javascripts/saving.js" charset="utf-8" type="text/javascript"></script>
-    <script src="Javascripts/automation.js" charset="utf-8" type="text/javascript"></script>
-    <script src="Javascripts/shop.js" charset="utf-8" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="break_infinity.js"></script>
+    <script src="game.js" charset="utf-8" type="text/javascript"></script>
+    <script src="Javascripts/automation.js" charset="utf-8" type="text/javascript"></script>
+    <script src="Javascripts/shop.js" charset="utf-8" type="text/javascript"></script>
     <title>lol</title>
 </head>
 
 <body>
-    <p id="number">You have 0.</p>
-    <p id="lol12" style="display: none">Your increment power is currently 1.</p>
-    <div id="nav" style="display: none">
-        <table>
+    <p id="number" style="margin: 20px auto 0;text-align: center">You have 0.</p>
+    <p id="super" style="margin: 0 auto; text-align: center; display: none">You have <span style="color: rgb(0, 255, 0)">0</span> super.</p>
+    <div id="nav" style="display: none; margin: 0 auto">
+        <table style="border-spacing: 15px; margin: 0 auto">
             <tr>
                 <td class="button" onclick="tab('increment')" style="color: gray; border-color: gray">Base</td>
                 <td class="button" onclick="tab('workers')" style="color: aqua; border-color: #00ffff">Workers</td>
-                <td class="button" onclick="tab('upgrades')" style="color: gold; border-color: gold; display: none; text-align: center" id="upgradeButton">Upgrades</td>
-                <td class="button" onclick="tab('options')" style="color: black; border-color: black">Options</td>
+                <td class="button" onclick="tab('upgrades')" style="color: gold; border-color: gold; display: none" id="upgradeButton">Upgrades</td>
+                <td class="button" onclick="tab('options')" style="color: silver; border-color: silver">Options</td>
             </tr>
         </table>
     </div>
-    <div id="increment">
-        <button class="btn" onclick="goUp()" style="display: inline-block">Make number go up</button>
-        <button class="btn" onclick="squarecrement()" id="squarecrementd" style="display: none">Upgrade increment power <br> Cost: 10</button>
+    <div id="increment" style="margin: 0 auto; text-align: center">
+        <button class="btn" onclick="goUp()" style="display: block; margin: 0 auto">Make number go up</button>
+        <button id="prestigeBtn" class="btn" onclick="prestige()" style="display: none; color: rgb(0, 255, 0); margin: 10px auto 0;border: solid rgb(0, 255, 0)">Reset for 1 super</button>
+        <br>
+        <table id="energizer" style="margin: 0 auto; border-spacing: 10px 0; display: none;">
+            <caption class="tier2" id="energyCaption">You have 0 energy, boosting production by 1x</caption>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tier2" id="energizerCount">No. of energizers: 0</td>
+                <td class="tier2"><button class="tier2button" onclick="buyEnergizer()" id="energizers1">Cost: 1 Super</button></td>
+                <td class="automatorOff" onclick="toggleWorkerAutomator('w1')" id="energizerAutomator" style="display: none; border-spacing: 15px">Auto: Off</td>
+                <td class="tier2">Battery</td>
+            </tr>
+            <tr id="placeholder">
+                <td class="tier2" id="energizer2Count">No. of idk: 0</td>
+                <td class="tier2"><button class="tier2button" onclick="buy2()" id="energizers2">Cost: 2e308</button></td>
+                <td class="automatorOff" onclick="toggleWorkerAutomator('w2')" id="energizer2Automator" style="display: none; border-spacing: 15px">Auto: Off</td>
+                <td class="tier2" style="border: 1px solid lime; border-radius: 10px">
+                    <div id="batteryLife" style="background-color: rgba(0,255,0,0.2); width: 0; height: 100%"></div>
+                </td>
+            </tr>
+            <tr id="placeholder2">
+                <td class="tier2" id="energizer3Count">No. of idk2: 0</td>
+                <td class="tier2"><button class="tier2button" onclick="buyHouse()" id="energizers3">Cost: 2e308</button></td>
+                <td class="automatorOff" onclick="toggleWorkerAutomator('w3')" id="energizer3Automator" style="display: none; border-spacing: 15px">Auto: Off</td>
+                <td class="tier2"><button class="tier2button" onclick="rechargeBattery()" style="width: 50%">Recharge</button></td>
+            </tr>
+        </table>
     </div>
     <div id="workers" style="display: none">
-        <table>
+        <table style="margin: 0 auto; border-spacing: 10px 0">
             <caption class="tier1" id="workerCaption">Your workers are increasing the number at a rate of 1/s</caption>
             <tr>
                 <td></td>
             </tr>
             <tr>
                 <td class="tier1" id="workerCount">No. of workers: 0</td>
-                <td class="tier1" onclick="buyWorker()" id="Workers1" style="border: 1px solid; border-radius: 10px; background-color: gray; cursor: pointer">Cost: 100</td>
+                <td class="tier1"><button class="tier1button" onclick="buyWorker()" id="Workers1">Cost: 100</button></td>
+                <td class="automatorOff" onclick="toggleWorkerAutomator('w1')" id="workerAutomator" style="display: none; border-spacing: 15px">Auto: Off</td>
+            </tr>
+            <tr id="family" style="display: none">
+                <td class="tier1" id="worker2Count">No. of families: 0</td>
+                <td class="tier1"><button class="tier1button" onclick="buyFamily()" id="Workers2">Cost: 1e5</button></td>
+                <td class="automatorOff" onclick="toggleWorkerAutomator('w2')" id="worker2Automator" style="display: none; border-spacing: 15px">Auto: Off</td>
+            </tr>
+            <tr id="house" style="display: none">
+                <td class="tier1" id="worker3Count">No. of houses: 0</td>
+                <td class="tier1"><button class="tier1button" onclick="buyHouse()" id="Workers3">Cost: 1e7</button></td>
+                <td class="automatorOff" onclick="toggleWorkerAutomator('w3')" id="worker3Automator" style="display: none; border-spacing: 15px">Auto: Off</td>
             </tr>
         </table>
     </div>
     <div id="upgrades" style="display: none">
-        <table>
-            <caption style="color: white">Scam shop</caption>
+        <table id="upNav" style="display: none; margin: 0 auto">
             <tr>
-                <td></td>
-            </tr>
-            <tr>
-
+                <td class="miniButton" onclick="upgradeTab('normalUpgrades')" style="color: gold; border-color: gold; font-size: 10px">Normal Upgrades</td>
+                <td class="miniButton" onclick="upgradeTab('prestigeUpgrades')" style="color: rgb(0, 255, 0); border-color: rgb(0, 255, 0); font-size: 10px">Advanced Upgrades</td>
             </tr>
         </table>
+        <div id="normalUpgrades">
+            <table style="border-spacing: 15px; margin: 0 auto;">
+                <caption style="color: white">scam shop</caption>
+                <tr>
+                    <td colspan="2" class="unbought" id="11" onclick="buy('11')">Unlock the Worker Autobuyer <br> Cost: 1000</td>
+                    <td class="unbought" id="13" onclick="buy('13')">Double the production of everything <br> Cost: 500</td>
+                </tr>
+                <tr>
+                    <td class="unbought" id="21" onclick="buy('21')">Unlock production of families <br> Cost: 1e4</td>
+                    <td class="unbought" id="22" onclick="buy('22')">Unlock the family Autobuyer <br> Cost: 1e5</td>
+                    <td class="unbought" id="23" onclick="buy('23')">Triple your production <br> Cost: 1e4</td>
+                </tr>
+                <tr>
+                    <td class="unbought" id="31" onclick="buy('31')">Unlock production of houses <br> Cost: 1e7</td>
+                    <td class="unbought" id="32" onclick="buy('32')">Unlock the house autobuyer <br> Cost: 1e12</td>
+                    <td class="unbought" id="33" onclick="buy('33')">Raise production to the power of 2 <br> Cost: 1e5</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="unbought" id="41" onclick="buy('41')">Allow workers to produce houses (circle of life) <br> Cost: 1e16</td>
+                    <td class="unbought" id="43" onclick="buy('43')">Add 9 to production base<br> Cost: 1e10</td>
+                </tr>
+            </table>
+        </div>
+        <div id="prestigeUpgrades" style="display: none">
+            <table style="border-spacing: 15px; margin: 0 auto; font-size: 15px">
+                <caption style="color: rgba(0, 255, 0, 1)">scam shop 2 electric boogaloo</caption>
+                <caption style="color: white"><span style="color: lime">Implemented Upgrades</span> | <span style="color: red">Incomplete Upgrades</span></caption>
+                <tr>
+                    <td class="unbought2" id="111" onclick="buy('111')">Each producer bought will add a 1% multiplier to that producer <br> Cost: 1 Super</td>
+                    <td class="unbought2" id="112" onclick="buy('112')">Unlock a new set of workers <br> Cost: 3 Super</td>
+                    <td class="incomplete" id="113" onclick="buy113()">lol <br> Cost: 2e308 Super</td>
+                </tr>
+                <tr>
+                    <td class="incomplete" id="121" onclick="buy121()">lol <br> Cost: 2e308 Super</td>
+                    <td class="incomplete" id="122" onclick="buy122()">lol <br> Cost: 2e308 Super</td>
+                    <td class="incomplete" id="123" onclick="buy123()">lol <br> Cost: 2e308 Super</td>
+                </tr>
+                <tr>
+                    <td class="incomplete" id="131" onclick="buy131()">lol <br> Cost: 2e308 Super</td>
+                    <td class="incomplete" id="132" onclick="buy132()">lol <br> Cost: 2e308 Super</td>
+                    <td class="incomplete" id="133" onclick="buy133()">lol <br> Cost: 2e308 Super</td>
+                </tr>
+                <tr>
+                    <td class="incomplete" id="141" onclick="buy141()">lol <br> Cost: 2e308 Super</td>
+                    <td class="incomplete" id="142" onclick="buy142()">lol <br> Cost: 2e308 Super</td>
+                    <td class="incomplete" id="143" onclick="buy143()">lol <br> Cost: 2e308 Super</td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div id="options" style="display: none">
-        <table>
+        <table style="margin: 0 auto">
             <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td><button class="btn" onclick="save()">Save the Game</button></td>
-                <td><button class="btn" onclick="reset()">Reset the Game</button></td>
+                <td style="width: 200px"><button class="btn" onclick="save()">Save the Game</button></td>
+                <td style="width: 200px"><button class="btn" onclick="reset()">Reset the Game</button></td>
             </tr>
         </table>
     </div>
 </body>
+<script src="Javascripts/saving.js" charset="utf-8" type="text/javascript"></script>
 </html>
